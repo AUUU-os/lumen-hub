@@ -10,7 +10,7 @@ import threading
 from datetime import datetime
 from pathlib import Path
 
-APPS_DIR = Path("E:/LUMEN_HUB/apps")
+APPS_DIR = Path("E:/LUMEN_HUB/BRANCHES")
 DATA_DIR = Path("E:/LUMEN_HUB/data")
 STATE_FILE = DATA_DIR / "runner_state.json"
 PORT_START = 9000

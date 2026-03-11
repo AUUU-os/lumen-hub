@@ -9,9 +9,9 @@ Usage:
   python lumen.py monitor
 """
 import sys
-from orchestrator.builder import build
-from orchestrator.runner import start, stop, status, run_monitor
-from orchestrator.gateway import run as run_gateway
+from WORLD_FORGE.builder import build
+from WORLD_FORGE.runner import start, stop, status, run_monitor
+from WORLD_FORGE.gateway import run as run_gateway
 import time
 
 def main():

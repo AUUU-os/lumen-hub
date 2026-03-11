@@ -195,7 +195,7 @@ def read_file(path: str) -> str:
     Read any file inside LUMEN_HUB.
 
     Args:
-        path: Relative to HUB_ROOT, e.g. 'M-AI-SELF/CHANGELOG.md' or 'SEEDS/SEED_001_AI_NATIVE_PAAS.md'
+        path: Relative to HUB_ROOT, e.g. 'CORE/CHANGELOG.md' or 'SEEDS/SEED_001_AI_NATIVE_PAAS.md'
     """
     target = HUB_ROOT / path
     if not target.resolve().is_relative_to(HUB_ROOT.resolve()):
@@ -209,13 +209,13 @@ def read_file(path: str) -> str:
 def write_file(path: str, content: str) -> str:
     """
     Write a file inside LUMEN_HUB.
-    Safe paths only: M-AI-SELF/, SEEDS/, docs/, data/.
+    Safe paths only: CORE/, SEEDS/, docs/, data/.
 
     Args:
         path: Relative to HUB_ROOT
         content: File content
     """
-    safe_prefixes = ["M-AI-SELF/", "SEEDS/", "docs/", "data/", "scripts/"]
+    safe_prefixes = ["CORE/", "SEEDS/", "docs/", "data/", "scripts/"]
     if not any(path.startswith(p) for p in safe_prefixes):
         return f"ERROR: Only {safe_prefixes} paths allowed for safety."
 

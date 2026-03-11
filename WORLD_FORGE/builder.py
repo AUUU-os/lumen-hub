@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-APPS_DIR = Path("E:/LUMEN_HUB/apps")
+APPS_DIR = Path("E:/LUMEN_HUB/BRANCHES")
 REPOS_DIR = Path("E:/LUMEN_HUB/repos")
 
 

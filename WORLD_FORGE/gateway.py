@@ -1,6 +1,6 @@
 """
 LUMEN HUB — THE GATEWAY
-Reverse Proxy: routes http://localhost/apps/<name> → internal port.
+Reverse Proxy: routes http://localhost/BRANCHES/<name> → internal port.
 """
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -51,7 +51,7 @@ class GatewayHandler(BaseHTTPRequestHandler):
             color = "green" if status == "running" else "red"
             rows += f"""
             <tr>
-                <td><a href="/apps/{name}">{name}</a></td>
+                <td><a href="/BRANCHES/{name}">{name}</a></td>
                 <td style="color:{color}">{status}</td>
                 <td>{port}</td>
                 <td>{info.get('pid', '-')}</td>
@@ -123,7 +123,7 @@ class GatewayHandler(BaseHTTPRequestHandler):
 def run(port: int = GATEWAY_PORT):
     server = HTTPServer(("0.0.0.0", port), GatewayHandler)
     print(f"[GATEWAY] 🚀 LUMEN HUB running on http://localhost:{port}")
-    print(f"[GATEWAY] Apps at http://localhost:{port}/apps/<name>")
+    print(f"[GATEWAY] Apps at http://localhost:{port}/BRANCHES/<name>")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
