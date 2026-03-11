@@ -40,7 +40,7 @@ HUB_ROOT = Path("E:/LUMEN_HUB")
 SEEDS_DIR = HUB_ROOT / "SEEDS"
 DATA_DIR = HUB_ROOT / "data"
 OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "qwen3:8b"
+DEFAULT_MODEL = "lumen-omega"  # dolphin-llama3 + OMEGA system prompt
 # ─────────────────────────────────────────────────────────────────
 
 mcp = FastMCP("lumen-hub")
