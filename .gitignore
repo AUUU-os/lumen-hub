@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Apps (deployed, isolated envs — not tracked)
+apps/*/venv/
+apps/*/node_modules/
+apps/*/.env
+
+# Data
+data/*.db
+data/*.log
+data/write_test.tmp
+
+# Secrets
+.env
+*.env
+secrets/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage
