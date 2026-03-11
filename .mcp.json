@@ -1,0 +1,6 @@
+{
+  "lumen-hub": {
+    "command": "python",
+    "args": ["E:/LUMEN_HUB/servers/lumen_mcp_server.py"]
+  }
+}
