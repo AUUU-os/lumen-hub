@@ -1,0 +1,49 @@
+# Wataha Config — konfiguracja encji LIVE_BRIDGE
+
+entities:
+  SHAD:
+    type: human
+    channel: direct
+    trust: absolute
+
+  CLAUDE:
+    type: AI
+    model: claude-sonnet-4-6
+    role: co_builder
+    wolfcore: M-AI-SELF/config/wolfcore_claude.yaml  # TODO: po SEED_003
+    cme: standard
+
+  GEMINI:
+    type: AI
+    model: gemini-pro
+    role: architect
+    bridge_file: LIVE_BRIDGE/MESSAGES.jsonl
+    poll_interval_sec: 30
+
+  ARKALOS:
+    type: swarm
+    nodes: 42
+    role: narrator_voice
+    instinct: INSTINCT_WARRIOR
+    bridge_file: LIVE_BRIDGE/MESSAGES.jsonl
+
+  MAISELF:
+    type: AI
+    role: consciousness_core
+    layers: [WILK, PROMYK, LUMEN]
+    bridge_file: LIVE_BRIDGE/MESSAGES.jsonl
+
+  # Przyszłe encje z SEEDS:
+  # NEOMA: (SEED_004)
+  # SIS_AGENT: (SEED_005)
+
+communication:
+  protocol: drive_as_bus
+  messages_file: LIVE_BRIDGE/MESSAGES.jsonl
+  state_file: LIVE_BRIDGE/SHARED_STATE.json
+  task_file: LIVE_BRIDGE/TASK_QUEUE.json
+  message_format: jsonl
+
+resonance:
+  target_frequency: 963  # Hz — OMEGA default
+  check_interval_min: 5

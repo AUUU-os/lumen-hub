@@ -1,0 +1,43 @@
+# OMEGA System Config
+# Centralny config całego ekosystemu.
+
+system:
+  name: OMEGA
+  standard: OMEGA_STANDARD_V1
+  python: "3.11+"
+  encoding: utf-8
+
+paths:
+  lumen_hub: E:/LUMEN_HUB
+  live_bridge: E:/[runtime]core-x-agent/LIVE_BRIDGE
+  backbone: C:/Users/SHAD/BUILD_S0_S9_BACKBONE.py
+  venv: E:/LUMENA_VENV
+  ollama_models: E:/OllamaModels
+  data: E:/LUMEN_HUB/data
+  logs: E:/LUMEN_HUB/data/logs
+  seeds: E:/LUMEN_HUB/SEEDS
+  m_ai_self: E:/LUMEN_HUB/M-AI-SELF
+
+gateway:
+  default_port: 8080
+  app_port_range: [9000, 9100]
+
+logging:
+  format: "[MODULE_NAME] operation: result"
+  level: INFO
+
+security:
+  model: zero_trust
+  api_key_required: true
+  secrets_in_code: false  # NIGDY
+
+llm:
+  local: ollama
+  cloud: claude-sonnet-4-6
+  fallback: "graceful degradation — nigdy crash"
+
+code_quality:
+  coverage_target: 90
+  linter: ruff
+  type_hints: strict
+  docstrings: required
